@@ -1,8 +1,10 @@
 package edu.icet.service.impl;
 
 import edu.icet.dto.DepartmentDto;
+import edu.icet.repository.DepartmentRepository;
 import edu.icet.service.DepartmentService;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,6 +12,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @Service
 public class DepartmentServiceImpl implements DepartmentService {
+    final DepartmentRepository departmentRepository;
+    final ModelMapper modelMapper;
     @Override
     public List<DepartmentDto> getAllDepartment() {
         return List.of();
