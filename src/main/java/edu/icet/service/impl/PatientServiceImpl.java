@@ -3,8 +3,11 @@ package edu.icet.service.impl;
 import edu.icet.dto.PatientDto;
 import edu.icet.service.PatientService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+@RequiredArgsConstructor
+@Service
 
 public class PatientServiceImpl implements PatientService {
     @Override
