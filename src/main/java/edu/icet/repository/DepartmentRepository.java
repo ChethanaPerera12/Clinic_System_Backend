@@ -1,10 +1,10 @@
-package edu.icet.service;
+package edu.icet.repository;
 
 import edu.icet.model.Departments;
 
 import java.util.List;
 
-public interface DepartmentService {
+public interface DepartmentRepository {
     List<Departments> getAllDepartment();
     boolean addDepartment(Departments department);
     boolean updateDepartment(Departments department);
