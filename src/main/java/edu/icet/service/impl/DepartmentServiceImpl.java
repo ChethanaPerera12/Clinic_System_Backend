@@ -1,7 +1,6 @@
 package edu.icet.service.impl;
 
 import edu.icet.dto.DepartmentDto;
-import edu.icet.repository.DepartmentRepository;
 import edu.icet.service.DepartmentService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -13,7 +12,7 @@ import java.util.List;
 @Service
 public class DepartmentServiceImpl implements DepartmentService {
     final DepartmentRepository departmentRepository;
-    final ModelMapper modelMapper;
+
     @Override
     public List<DepartmentDto> getAllDepartment() {
         return List.of();
