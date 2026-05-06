@@ -1,6 +1,6 @@
 package edu.icet.controller;
 
-import edu.icet.dto.PatientDto;
+import edu.icet.model.Patients;
 import edu.icet.service.PatientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -15,15 +15,15 @@ public class PatientController {
     private final PatientService patientService;
 
     @GetMapping("/getAll")
-    public List<PatientDto> getAllPatients(){
+    public List<Patients> getAllPatients(){
         return patientService.getAllPatients();
     }
     @PostMapping("/add")
-    public boolean addPatient(@RequestBody PatientDto patientDto) {
+    public boolean addPatient(@RequestBody Patients patientDto) {
         return patientService.addPatient(patientDto);
     }
     @PutMapping("/update")
-    public boolean updatePatient(@RequestBody PatientDto patientDto) {
+    public boolean updatePatient(@RequestBody Patients patientDto) {
         return patientService.updatePatient(patientDto);
     }
     @DeleteMapping("/delete/{id}")
@@ -31,7 +31,7 @@ public class PatientController {
         return patientService.deletePatient(id);
     }
     @GetMapping("search/{id}")
-    public PatientDto searchPatient(@PathVariable Integer id) {
+    public Patients searchPatient(@PathVariable String id) {
         return patientService.searchPatient(id);
     }
 }

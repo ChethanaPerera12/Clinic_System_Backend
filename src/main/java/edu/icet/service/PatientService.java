@@ -1,13 +1,13 @@
 package edu.icet.service;
 
-import edu.icet.dto.PatientDto;
+import edu.icet.model.Patients;
 
 import java.util.List;
 
 public interface PatientService {
-    List<PatientDto> getAllPatients();
-    boolean addPatient(PatientDto patientDto);
-    boolean updatePatient(PatientDto patientDto);
+    List<Patients> getAllPatients();
+    boolean addPatient(Patients patientDto);
+    boolean updatePatient(Patients patientDto);
     boolean deletePatient(Integer id);
-    PatientDto searchPatient(Integer id);
+    Patients searchPatient(String id);
 }
