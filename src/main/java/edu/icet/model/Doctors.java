@@ -1,14 +1,16 @@
-package edu.icet.dto;
+package edu.icet.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DoctorDto {
-    private Integer id;
+@ToString
+public class Doctors {
+    private String id;
     private String name;
     private String specialization;
     private String email;

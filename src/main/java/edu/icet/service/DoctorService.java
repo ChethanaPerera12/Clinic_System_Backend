@@ -1,13 +1,13 @@
 package edu.icet.service;
 
-import edu.icet.dto.DoctorDto;
+import edu.icet.model.Doctors;
 
 import java.util.List;
 
 public interface DoctorService {
-    List<DoctorDto> getAllDoctors();
-    boolean addDoctor(DoctorDto doctorDto);
-    boolean updateDoctor(DoctorDto doctorDto);
+    List<Doctors> getAllDoctors();
+    boolean addDoctor(Doctors doctorDto);
+    boolean updateDoctor(Doctors doctorDto);
     boolean deleteDoctor(Integer id);
-    DoctorDto searchDoctor(Integer id);
+    Doctors searchDoctor(String id);
 }

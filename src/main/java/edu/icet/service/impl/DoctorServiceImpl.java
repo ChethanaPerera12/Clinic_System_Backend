@@ -1,6 +1,6 @@
 package edu.icet.service.impl;
 
-import edu.icet.dto.DoctorDto;
+import edu.icet.model.Doctors;
 import edu.icet.service.DoctorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,17 +11,17 @@ import java.util.List;
 @Service
 public class DoctorServiceImpl implements DoctorService {
     @Override
-    public List<DoctorDto> getAllDoctors() {
+    public List<Doctors> getAllDoctors() {
         return List.of();
     }
 
     @Override
-    public boolean addDoctor(DoctorDto doctorDto) {
+    public boolean addDoctor(Doctors doctorDto) {
         return false;
     }
 
     @Override
-    public boolean updateDoctor(DoctorDto doctorDto) {
+    public boolean updateDoctor(Doctors doctorDto) {
         return false;
     }
 
@@ -31,7 +31,7 @@ public class DoctorServiceImpl implements DoctorService {
     }
 
     @Override
-    public DoctorDto searchDoctor(Integer id) {
+    public Doctors searchDoctor(String id) {
         return null;
     }
 }
