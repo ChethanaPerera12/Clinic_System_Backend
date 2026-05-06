@@ -1,23 +1,23 @@
 package edu.icet.repository.impl;
 
-import edu.icet.model.Departments;
+import edu.icet.model.Department;
 import edu.icet.repository.DepartmentRepository;
 
 import java.util.List;
 
 public class DepartmentRepositoryimpl implements DepartmentRepository {
     @Override
-    public List<Departments> getAllDepartment() {
+    public List<Department> getAllDepartment() {
         return List.of();
     }
 
     @Override
-    public boolean addDepartment(Departments department) {
+    public boolean addDepartment(Department department) {
         return false;
     }
 
     @Override
-    public boolean updateDepartment(Departments department) {
+    public boolean updateDepartment(Department department) {
         return false;
     }
 
@@ -27,7 +27,7 @@ public class DepartmentRepositoryimpl implements DepartmentRepository {
     }
 
     @Override
-    public Departments searchDepartment(String id) {
+    public Department searchDepartment(String id) {
         return null;
     }
 }

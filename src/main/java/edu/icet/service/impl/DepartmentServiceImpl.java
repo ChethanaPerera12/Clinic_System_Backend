@@ -1,6 +1,6 @@
 package edu.icet.service.impl;
 
-import edu.icet.model.Departments;
+import edu.icet.model.Department;
 import edu.icet.repository.DepartmentRepository;
 import edu.icet.service.DepartmentService;
 import lombok.RequiredArgsConstructor;
@@ -13,17 +13,17 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     private final DepartmentRepository departmentRepository;
     @Override
-    public List<Departments> getAllDepartment() {
+    public List<Department> getAllDepartment() {
         return departmentRepository.getAllDepartment();
     }
 
     @Override
-    public boolean addDepartment(Departments department) {
+    public boolean addDepartment(Department department) {
         return departmentRepository.addDepartment(department);
     }
 
     @Override
-    public boolean updateDepartment(Departments department) {
+    public boolean updateDepartment(Department department) {
         return departmentRepository.updateDepartment(department);
     }
 
@@ -33,7 +33,7 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     @Override
-    public Departments searchDepartment(String id) {
+    public Department searchDepartment(String id) {
         return departmentRepository.searchDepartment(id);
     }
 }
