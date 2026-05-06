@@ -19,12 +19,12 @@ public class DoctorController {
         return doctorService.getAllDoctors();
     }
     @PostMapping("/add")
-    public boolean addDoctor(@RequestBody Doctors doctorDto) {
-        return doctorService.addDoctor(doctorDto);
+    public boolean addDoctor(@RequestBody Doctors doctors) {
+        return doctorService.addDoctor(doctors);
     }
     @PutMapping("/update")
-    public boolean updateDoctor(@RequestBody Doctors doctorDto) {
-        return doctorService.updateDoctor(doctorDto);
+    public boolean updateDoctor(@RequestBody Doctors doctors) {
+        return doctorService.updateDoctor(doctors);
     }
     @DeleteMapping("/delete/{id}")
     public boolean deleteDoctor(@PathVariable Integer id) {

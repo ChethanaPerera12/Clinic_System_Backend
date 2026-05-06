@@ -10,18 +10,19 @@ import java.util.List;
 @RequiredArgsConstructor
 @Service
 public class DoctorServiceImpl implements DoctorService {
+
     @Override
     public List<Doctors> getAllDoctors() {
         return List.of();
     }
 
     @Override
-    public boolean addDoctor(Doctors doctorDto) {
+    public boolean addDoctor(Doctors doctors) {
         return false;
     }
 
     @Override
-    public boolean updateDoctor(Doctors doctorDto) {
+    public boolean updateDoctor(Doctors doctors) {
         return false;
     }
 
