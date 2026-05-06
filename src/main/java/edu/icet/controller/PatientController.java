@@ -19,12 +19,12 @@ public class PatientController {
         return patientService.getAllPatients();
     }
     @PostMapping("/add")
-    public boolean addPatient(@RequestBody Patients patientDto) {
-        return patientService.addPatient(patientDto);
+    public boolean addPatient(@RequestBody Patients patients) {
+        return patientService.addPatient(patients);
     }
     @PutMapping("/update")
-    public boolean updatePatient(@RequestBody Patients patientDto) {
-        return patientService.updatePatient(patientDto);
+    public boolean updatePatient(@RequestBody Patients patients) {
+        return patientService.updatePatient(patients);
     }
     @DeleteMapping("/delete/{id}")
     public boolean deletePatient(@PathVariable Integer id) {

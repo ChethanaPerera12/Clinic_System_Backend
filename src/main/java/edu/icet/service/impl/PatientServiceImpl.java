@@ -10,18 +10,19 @@ import java.util.List;
 @Service
 
 public class PatientServiceImpl implements PatientService {
+
     @Override
     public List<Patients> getAllPatients() {
         return List.of();
     }
 
     @Override
-    public boolean addPatient(Patients patientDto) {
+    public boolean addPatient(Patients patients) {
         return false;
     }
 
     @Override
-    public boolean updatePatient(Patients patientDto) {
+    public boolean updatePatient(Patients patients) {
         return false;
     }
 

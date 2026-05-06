@@ -5,9 +5,10 @@ import edu.icet.model.Patients;
 import java.util.List;
 
 public interface PatientService {
+
     List<Patients> getAllPatients();
-    boolean addPatient(Patients patientDto);
-    boolean updatePatient(Patients patientDto);
+    boolean addPatient(Patients patients);
+    boolean updatePatient(Patients patients);
     boolean deletePatient(Integer id);
     Patients searchPatient(String id);
 }
