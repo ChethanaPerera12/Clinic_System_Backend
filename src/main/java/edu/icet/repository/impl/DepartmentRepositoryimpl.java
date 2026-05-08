@@ -15,11 +15,14 @@ public class DepartmentRepositoryimpl implements DepartmentRepository {
 
     @Override
     public List<Department> getAllDepartment() {
-        return jdbcTemplate.query("SELECT * FROM department", (rs, rowNum) -> new Department(
-                rs.getString(1),
-                rs.getString(2),
-                rs.getString(3)
-        ));
+        String sql ="SELECT * FROM department";
+        return jdbcTemplate.query(sql, (rs, rowNum) ->
+                new Department(
+                        rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3)
+                )
+        );
     }
 
     @Override
