@@ -27,7 +27,12 @@ public class DepartmentRepositoryimpl implements DepartmentRepository {
 
     @Override
     public boolean addDepartment(Department department) {
-        return false;
+        String sql = "INSERT INTO department VALUES (?, ?, ?)";
+         return jdbcTemplate.update(sql,
+                 department.getId(),
+                 department.getName(),
+                 department.getDescription()
+         ) > 0;
     }
 
     @Override
