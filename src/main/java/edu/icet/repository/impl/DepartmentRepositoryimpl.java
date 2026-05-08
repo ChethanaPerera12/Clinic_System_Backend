@@ -53,7 +53,12 @@ public class DepartmentRepositoryimpl implements DepartmentRepository {
 
     @Override
     public Department searchDepartment(String id) {
-        String sql ="DELETE FROM department WHERE id = ?";
-        return jdbcTemplate.queryForObject(sql, (rs, rowNum) ->
+        String sql ="SELECT * FROM department WHERE id = ?";
+        return jdbcTemplate.queryForObject(sql, (rs, rowNum) -> new Department(
+                rs.getString(1),
+                rs.getString(2),
+                rs.getString(3)
+        ), id);
     }
+
 }
