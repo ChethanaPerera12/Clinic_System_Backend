@@ -37,8 +37,12 @@ public class DepartmentRepositoryimpl implements DepartmentRepository {
 
     @Override
     public boolean updateDepartment(Department department) {
-        String sql ="UPDATE department SET "
-        return false;
+        String sql ="UPDATE department SET name=?, description=? WHERE id=?";
+        return jdbcTemplate.update(sql,
+                department.getName(),
+                department.getDescription(),
+                department.getId()
+        ) > 0;
     }
 
     @Override
