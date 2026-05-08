@@ -37,16 +37,19 @@ public class DepartmentRepositoryimpl implements DepartmentRepository {
 
     @Override
     public boolean updateDepartment(Department department) {
+        String sql ="UPDATE department SET "
         return false;
     }
 
     @Override
     public boolean deleteDepartment(Integer id) {
-        return false;
+        String sql ="DELETE FROM department WHERE id = ?";
+        return jdbcTemplate.update(sql, id) > 0;
     }
 
     @Override
     public Department searchDepartment(String id) {
-        return null;
+        String sql ="DELETE FROM department WHERE id = ?";
+        return jdbcTemplate.queryForObject(sql, (rs, rowNum) ->
     }
 }
